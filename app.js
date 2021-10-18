@@ -54,7 +54,7 @@ function lose(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     if (computerScore < 5) {
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord}  loses to  ${convertToWord(computerChoice)}${smallCompWord}. You lost!`
-    }   else if(computerScore === 5){
+    }   else if(computerScore === 5) {
         result_p.innerHTML='Game over, you lose! <button onclick="endGame()">Click here to play again</button>'
         rock_div.setAttribute("disabled", 1);
         paper_div.setAttribute("disabled", 1);
@@ -99,9 +99,9 @@ function game(userChoice) {
 
 function endGame() {
     userScore = 0;
-    compScore = 0;
+    computerScore = 0;
     userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
+    computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = ``;
     rock_div.removeAttribute("disabled");  paper_div.removeAttribute("disabled");  scissors_div.removeAttribute("disabled");
   }
